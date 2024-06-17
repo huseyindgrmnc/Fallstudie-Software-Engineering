@@ -60,5 +60,13 @@ function Get-AuthenticationToken {
 $token = Get-AuthenticationToken -npsso "90Dj2cBobBKKAOv34CkJ53bPl2JuPYhVxDB1YiBSR98Vq1rc7StgtHY7VY8xk5V6"
 
 $outputFile = "C:\Users\silviu.moldovan\AndroidStudioProjects\fallstudiev2\assets\trophy_titles.json"
+
+# Check if file exists and delete it if it does
+if (Test-Path -Path $outputFile) {
+    Remove-Item -Path $outputFile -Force
+    Write-Host "Existing file removed: $outputFile"
+}
+
+# Save new output
 Invoke-RestMethod -Uri "https://m.np.playstation.com/api/trophy/v1/users/me/trophyTitles" -Authentication Bearer -Token $token | ConvertTo-Json -Depth 3 | Out-File -FilePath $outputFile -Force
 Write-Host "Output saved to $outputFile"
