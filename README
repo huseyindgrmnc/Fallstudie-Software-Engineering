@@ -1,0 +1,21 @@
+
+Schritte damit das Programm ausgeführt werden kann (VS Code hats bei mir geklappt)
+
+-- Voraussetzung Android Studio mit nötigen Dart & Flutter SDK installiert
+
+1. Flutter + Dart Extenstion in VS Code installieren
+2. Terminal in VS Code öffnen und eintippen: cd C:\Users\deinUsername\AndroidStudioProjects
+3. in VS Code Terminal eingeben: flutter create fallstudie
+4. In Ordner "fallstudie" muss ein Ordner "assets" erstellt werden
+5. die pubspec.yaml vom git herunterladen oder code copy pasten und in der aktuellen Projektdatei ersetzen
+6. Get-AuthenticationToken.ps1 Datei herunterladen und in lib Ordner setzen
+7. $outputFile = C:\Users\deinUsername\AndroidStudioProjects\fallstudie\assets\trophy_titles.json
+8. in VS Code Terminal eingeben: cd fallstudie
+9. in VS Code Terminal eingeben: cd lib
+10. in  VS Code Terminal eingeben: ./Get-AuthenticationToken.ps1
+11. Prüfen ob in assets Ordner die Datei: trophy_titles.json erstellt wurde
+12. in VS Code Terminal: flutter run
+13. in VS Code Terminal: 1
+14. das geöffnete Fenster ca. zur Handygröße verkleinern
+
+Zu Risiken und Nebenwirkungen lesen Sie die Packungsbeilage und fragen Sie Ihre Ärztin, Ihren Arzt oder in Ihrer Apotheke.
